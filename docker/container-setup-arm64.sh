@@ -38,6 +38,7 @@ apt-get update && apt-get -y install\
  liblapack-dev\
  liblapack-doc\
  libstdc++-11-doc\
+ cmake\
  make\
  make-doc
 

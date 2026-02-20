@@ -87,7 +87,7 @@ The X server we will install differs based on your host operating system. Select
 
 1. Download and install [XQuartz](https://www.xquartz.org/), which is an X11 server built for Mac OS.  Run the installer, and allow the app to make changes to your computer when prompted. During installation, you will be asked log out and log back into your computer, in order to update your system environment.
 2. Once XQuartz is installed, open it from the applications menu. Once it opens, go to the menu bar at the top of your screen and select **XQuartz > Preferences**. Go to the **Security** tab and check the box labeled "**Allow connections from network clients**" (like the figure below). This will allow the container to connect to your X server.
-   ![xquartz-allow-connections](https://hackmd.io/_uploads/B1JWKGs2A.png =400x)
+   ![xquartz-allow-connections](figures/xquartz.png)
 
 3. Quit XQuartz by selecting **XQuartz** > **Quit** from the menu bar. XQuartz should re-open automatically when you start the container later.
 
@@ -134,7 +134,7 @@ To set up your environment, do the following:
     > ### Important note for Windows Users
     > Check your terminal's working directory before continuing.  If it starts with `/mnt/c/` (or another drive letter), you should switch to a directory *within* your WSL system (e.g., a folder in your WSL home dir, like `~/cs441`) before continuing.  For example:
     >
-    > ![wsl-terminal-problem-notes](https://hackmd.io/_uploads/HkmdDIDh0.png)
+    > ![wsl-terminal-problem-notes](figures/wsl-issues.png)
     >
     > Using your container environment from `/mnt/c` has been known to cause performance problems, which you can easily avoid by changing directories.
     >
@@ -186,7 +186,7 @@ Once you created your Docker image, we need to create a container running the im
 You can enter your container as follows:
 
 1. Make sure you're inside the directory `<DEV-ENVIRONMENT>`, which is the top-level directory of the repository earlier.
-2. Run the script `run-container` to start the container, and poke around to get a sense of the environment:  (__Windows users__:  If you get errors, see [this section](#Windows-line-endings-%E2%80%9Cunexpected-end-of-file%E2%80%9D) for help.)
+2. Run the script `run-container` to start the container, and poke around to get a sense of the environment:  (__Windows users__:  If you get errors, see [this section](#windows-line-endings-unexpected-end-of-file) for help.)
 
 ```shell
 $ ./run-container              # enters your Docker container
@@ -310,9 +310,9 @@ We recommend using CLion to work on the projects--CLion natively allow you to ea
 If you don't want to use CLion, skip to [Running Wireshark](#Running-Wireshark).
 1. After you have installed and opened CLion, go to settings and search for **toolchain**. Click the `+` and add Docker.
 
-![img_1.png](images/img_1.png)
+![img_1.png](figures/docker_toolchain_dropdown.png)
 
-![img.png](images/docker_clion_config.png)
+![img.png](figures/docker_clion_config.png)
 
 2. If you have not done so already, switch to a terminal and start your container by running `./run-container`.  For instructions on how to do this, see [here](#Entering-the-container).
 
@@ -643,7 +643,7 @@ It seems that there has been a huge memory leak in Docker on WSL (the Windows su
 
 To check if this is happening, you can open **Task Manager**  and check how much memory is being allocated to WSL's VM (`Vmmem`) and Docker:
 
-![img.png](images/img.png)
+![img.png](figures/mem_issues_wsl.png)
 
 If left unchecked, WSL and/or Docker can consume a lot of memory.  This can cause problems that are hard to predict, but usually end up causing programs to hang or crash.
 

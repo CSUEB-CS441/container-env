@@ -6,7 +6,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 maindir=""
 container_name=cs441-container
 network_name=net-cs441
-github_org=CSUEB-CS441
+github_org=csueb-cs441
 default_user="cs441-user"
 user_home="/home/cs441-user"  # User's home dir inside container
 

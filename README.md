@@ -4,6 +4,8 @@ This repo contains a minimal dev environment setup for CS 441.
 
 ## Getting started
 
+### Detailed setup instructions, refer to our [setup guide](container-setup.md)
+
 ```bash
 # 1. load pre-built docker image
 ./run-container setup
@@ -11,7 +13,6 @@ This repo contains a minimal dev environment setup for CS 441.
 # 2. start development environment
 ./run-container
 ```
-For detailed setup instructions, refer to our [setup guide](container-setup.md)!
 
 ## Advanced setup (for staff)
 
